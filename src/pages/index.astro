@@ -123,6 +123,28 @@ const description = 'Novalyz lit tes séances et ton ressenti pour te dire comme
     </div>
   </section>
 
+  <!-- HISTOIRE (08/11 : récit validé avec le fondateur, sans nom ni photo) -->
+  <section id="histoire" class="histoire on-dark" aria-labelledby="h-histoire">
+    <div class="wrap hist-grid">
+      <div>
+        <p class="eyebrow">L’histoire</p>
+        <h2 id="h-histoire" class="display">Né au bord d’un terrain.</h2>
+      </div>
+      <div class="hist-txt">
+        <p>Tout part de l’analyse vidéo. Pendant ma formation, j’ai rejoint un club de football qui n’avait pas encore l’habitude de la vidéo. Il a fallu partir de zéro&nbsp;: construire mes propres calculs sur Excel pour tirer des données de chaque match, et donner à l’entraîneur de quoi corriger et faire progresser son équipe.</p>
+        <p>Le sport, je le pratique depuis toujours&nbsp;: ping-pong, tennis, football, boxe française, kickboxing, et la musculation depuis quatre ans. J’ai appliqué la même méthode à mes propres séances. Novalyz est né là&nbsp;: transformer des données en décisions.</p>
+        <p>Demain, Novalyz veut réunir sur une même plateforme tous ceux qui entourent un sportif&nbsp;: coach, préparateur physique, kiné et le joueur lui-même, en club comme en solo, dans plusieurs sports.</p>
+        <ul class="hist-faits" aria-label="Le parcours">
+          <li>Analyse vidéo</li><li>Analyse de la performance</li><li>Musculation depuis 4 ans</li>
+        </ul>
+        <div class="hist-ia">
+          <b>Fait par un humain, aidé par l’IA</b>
+          <span>Les règles d’analyse viennent du terrain et de la science du sport&nbsp;: elles calculent toujours de la même façon, à partir de tes données. L’IA m’aide à écrire le code et, dans l’app, à expliquer ces chiffres avec des mots. Elle ne les invente pas.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- VISION -->
   <section id="vision" class="vision" aria-labelledby="h-vision">
     <div class="wrap">
@@ -274,6 +296,17 @@ const description = 'Novalyz lit tes séances et ton ressenti pour te dire comme
     .etapes { grid-template-columns: 1fr 1fr; row-gap: 28px; }
   }
   @media (max-width: 520px) { .etapes { grid-template-columns: 1fr; border-top: 0; border-left: 2px solid var(--line); } .etapes li { padding: 0 0 0 22px; } .etapes li::before { top: 6px; left: -7px; } }
+  /* ── Histoire ── */
+  .histoire { background: var(--night); color: #fff; padding: var(--s9) 0; }
+  .hist-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--s7); align-items: start; }
+  .histoire h2 { font-size: clamp(30px, 4.2vw, 50px); margin-top: 14px; }
+  .hist-txt { display: flex; flex-direction: column; gap: 16px; color: #C3CFEA; font-size: 17.5px; }
+  .hist-faits { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hist-faits li { font-family: var(--f-mark); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: #DCE4F7; border: 1px solid rgba(255,255,255,.2); border-radius: var(--r-pill); padding: 7px 12px; }
+  .hist-ia { margin-top: 8px; border-left: 3px solid var(--blue-2); padding: 4px 0 4px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .hist-ia b { color: #fff; }
+  .hist-ia span { font-size: 15.5px; }
+  @media (max-width: 900px) { .hist-grid { grid-template-columns: 1fr; gap: var(--s5); } }
   /* ── Confiance ── */
   .confiance { padding: var(--s9) 0 var(--s8); border-top: 1px solid var(--line); }
   .confiance h2 { font-size: clamp(28px, 4vw, 46px); margin: 14px 0 0; }
